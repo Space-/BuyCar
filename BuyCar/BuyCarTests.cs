@@ -18,6 +18,13 @@ namespace BuyCar
             var periodOfMonthsAndBalance = new int[] { 0, 4000 };
             Assert.AreEqual(periodOfMonthsAndBalance, BuyCar.nbMonths(12000, 8000, 1000, 1.5));
         }
+
+        [Test]
+        public void OldCar_8000_NewCar_8000_savingPerMonth_1000_percentLossByMonth_one_dot_five_percent_return_month__balance_0()
+        {
+            var periodOfMonthsAndBalance = new int[] { 0, 0 };
+            Assert.AreEqual(periodOfMonthsAndBalance, BuyCar.nbMonths(8000, 8000, 1000, 1.5));
+        }
     }
 
     public class BuyCar
