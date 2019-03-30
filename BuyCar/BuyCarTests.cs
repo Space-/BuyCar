@@ -1,14 +1,9 @@
 using NUnit.Framework;
 
-namespace Tests
+namespace BuyCar
 {
-    public class Tests
+    public class BuyCarTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void Test1()
         {
