@@ -34,10 +34,6 @@ namespace BuyCar
                     : descPercentPerMonth;
 
                 periodOfMonths++;
-
-                //                var totalAssets = nowPriceOldCar + savingPerMonth * periodOfMonths;
-                //                balance = totalAssets - nowPriceNewCar;
-
                 balance = nowPriceOldCar + savingPerMonth * periodOfMonths - nowPriceNewCar;
             }
 
