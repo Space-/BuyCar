@@ -40,8 +40,8 @@ namespace BuyCar
             while (balance < 0)
             {
                 // at the end of this month
-                nowPriceOldCar = nowPriceOldCar - nowPriceOldCar * descPercentPerMonth;
-                nowPriceNewCar = nowPriceNewCar - nowPriceNewCar * descPercentPerMonth;
+                nowPriceOldCar = GetCurrentCarPrice(nowPriceOldCar, descPercentPerMonth);
+                nowPriceNewCar = GetCurrentCarPrice(nowPriceNewCar, descPercentPerMonth);
 
                 descPercentPerMonth = periodOfMonths % priceLossPercentMonthCycle == 0
                     ? descPercentPerMonth += increaseLossPercentEveryTwoMonth
@@ -52,6 +52,11 @@ namespace BuyCar
             }
 
             return new int[] { periodOfMonths, (int)Math.Round(balance) };
+        }
+
+        private static float GetCurrentCarPrice(float nowPriceNewCar, float descPercentPerMonth)
+        {
+            return nowPriceNewCar - nowPriceNewCar * descPercentPerMonth;
         }
     }
 }
