@@ -39,7 +39,6 @@ namespace BuyCar
 
             while (balance < 0)
             {
-                // at the end of this month
                 nowPriceOldCar = GetCurrentCarPrice(nowPriceOldCar, descPercentPerMonth);
                 nowPriceNewCar = GetCurrentCarPrice(nowPriceNewCar, descPercentPerMonth);
 
