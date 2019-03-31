@@ -54,9 +54,9 @@ namespace BuyCar
             return new int[] { periodOfMonths, (int)Math.Round(balance) };
         }
 
-        private static float GetCurrentCarPrice(float nowPriceNewCar, float descPercentPerMonth)
+        private static float GetCurrentCarPrice(float nowPriceOfCar, float descPercentPerMonth)
         {
-            return nowPriceNewCar - nowPriceNewCar * descPercentPerMonth;
+            return nowPriceOfCar - nowPriceOfCar * descPercentPerMonth;
         }
     }
 }
